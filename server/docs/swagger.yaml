@@ -1,0 +1,185 @@
+definitions:
+  handler.CreateDTO:
+    properties:
+      text:
+        type: string
+      title:
+        type: string
+    type: object
+  handler.UpdateDTO:
+    properties:
+      text:
+        type: string
+      title:
+        type: string
+    type: object
+  models.Text:
+    properties:
+      id:
+        type: string
+      text:
+        type: string
+      title:
+        type: string
+    type: object
+host: localhost:1337
+info:
+  contact: {}
+  description: Service provides basic CRUD operations with data which located on website
+  title: Cargo Logistics API
+  version: "1.0"
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: Get a list of all texts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              items:
+                $ref: '#/definitions/models.Text'
+              type: array
+            type: object
+      summary: Get all texts
+      tags:
+      - texts
+    post:
+      consumes:
+      - application/json
+      description: Add a new text to the collection
+      parameters:
+      - description: Text to add
+        in: body
+        name: text
+        required: true
+        schema:
+          $ref: '#/definitions/handler.CreateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Add a new text
+      tags:
+      - texts
+  /{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a text by ID
+      parameters:
+      - description: Text ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Delete text
+      tags:
+      - texts
+    get:
+      consumes:
+      - application/json
+      description: Get a single text item by ID
+      parameters:
+      - description: Text ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Get a text by ID
+      tags:
+      - texts
+    put:
+      consumes:
+      - application/json
+      description: Update an existing text by ID
+      parameters:
+      - description: Text ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Text data
+        in: body
+        name: text
+        required: true
+        schema:
+          $ref: '#/definitions/handler.UpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Update text
+      tags:
+      - texts
+swagger: "2.0"
