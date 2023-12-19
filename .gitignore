@@ -1,2 +1,13 @@
 *.env
 *.log
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+server/.env
+server/.DS_Store
+front/node_modules
+front/.env
+front/build
+front/.DS_Store
+front/.log
