@@ -3,58 +3,120 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(197, 197, 197, 0.70);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2C2A2A;
+}
+
+
 .nav-link-hover-line {
-    position: absolute;
-    bottom: -25px; 
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #B4884F;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #B4884F;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 @media not all and (min-width: 1024px) {
-    .nav-link-hover-line {
-        bottom: -5px; 
-    }
+  .nav-link-hover-line {
+    bottom: -5px;
+  }
 }
 
 
 a:hover .nav-link-hover-line {
-    width: 100%;
-    left: 0;
- 
+  width: 100%;
+  left: 0;
+
 }
 
 .checkbox-container {
-    position: relative;
-  }
-  
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .checkbox-container input:checked + .checkmark {
-    background-color: #B4884F;
-    color: #fff;
-    border: 1px solid #B4884F;
-  }
-  
+  position: relative;
+}
 
-  .animation-hover {
-    transition-property: opacity;
-    transition: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0.1s;
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container input:checked+.checkmark {
+  background-color: #B4884F;
+  color: #fff;
+  border: 1px solid #B4884F;
+}
+
+
+.animation-hover {
+  transition-property: opacity;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0.1s;
+}
+
+
+.text-block {
+  margin-bottom: 16px;
+  text-align: justify;
+  text-align: justify;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .text-block {
+    font-size: 1.13rem;
   }
-  
+}
+
+@media only screen and (max-width: 768px) {
+
+  .text-block {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .text-block {
+    font-size: 0.9rem;
+  }
+}
+
+.text-block p {
+  margin-bottom: 8px;
+}
+
+
+.text-block ul {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+.text-block li {
+  margin-bottom: 4px;
+}

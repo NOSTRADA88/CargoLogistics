@@ -22,7 +22,7 @@ const Order = ({ closeModal }: OrderProps) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-bg-main p-10 rounded-[20px]">
                 <div className="flex justify-end">
                     <button
