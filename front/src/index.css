@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 .nav-link-hover-line {
     position: absolute;
@@ -48,5 +48,13 @@ a:hover .nav-link-hover-line {
     background-color: #B4884F;
     color: #fff;
     border: 1px solid #B4884F;
+  }
+  
+
+  .animation-hover {
+    transition-property: opacity;
+    transition: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
   }
   
