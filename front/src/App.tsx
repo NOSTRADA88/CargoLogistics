@@ -1,5 +1,5 @@
-import { AboutCompany, Advantages, MainScreen, Services } from "./components";
-import { Nav } from "./section";
+import { AboutCompany, Advantages, Contact, MainScreen, Partners, Services } from "./components";
+import { Footer, Nav } from "./section";
 
 function App() {
   return (
@@ -16,8 +16,17 @@ function App() {
       <section  className="pt-16 bg-main-dark">
         <Services />
       </section>
-      <section  className=" bg-main-dark">
+      <section  className=" bg-bg-main">
         <AboutCompany />
+      </section>
+      <section  className="pt-16 bg-main-dark">
+      <Partners />
+      </section>
+      <section  className=" bg-bg-main">
+        <Contact />
+      </section>
+      <section  className=" pt-16 bg-[#414141]">
+        <Footer />
       </section>
     </div>
   );

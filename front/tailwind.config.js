@@ -29,6 +29,7 @@ module.exports = {
         "main-dark": "#212223",
         "nav-text": "rgba(197, 197, 197, 0.70)",
         "main-gray": "rgba(255, 255, 255, 0.50)",
+        "main-lightgray": "rgba(255, 255, 255, 0.10)",
         "main-background": "rgba(33, 34, 35, 0.80)",
         "main-text": "#212223"
       },

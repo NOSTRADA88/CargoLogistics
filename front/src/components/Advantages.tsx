@@ -29,7 +29,7 @@ const Advantages = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pb-20">
       <h1 className="text-center font-montserrat text-4xl font-semibold text-main-yellow mb-8  max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
         Наши преимущества
       </h1>

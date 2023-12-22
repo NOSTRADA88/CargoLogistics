@@ -17,7 +17,7 @@ const MainScreen = () => {
                         Оформить заявку на расчет
                     </button>
                 </div>
-                <img src={MainBanner} alt='main-banner' className="max-2xl:h-[600px]  max-2xl:object-cover max-md:h-[300px]" />
+                <img src={MainBanner} alt='main-banner' className=" max-[2560px]:w-[1500px] max-[1920px]:w-[1000px]  max-2xl:h-[600px]  max-2xl:object-cover max-md:h-[300px]" />
             </div>
         </div>
     )

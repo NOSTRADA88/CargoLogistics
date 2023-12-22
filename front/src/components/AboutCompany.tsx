@@ -3,15 +3,15 @@ import { About } from "../assets"
 
 const AboutCompany = () => {
     return (
-        <div className="bg-main-dark w-full " >
+        <div id='about' className=" w-full " >
             <div className="flex max-2xl:flex-col justify-center">
-                <img src={About} alt='main-banner' className=" max-2xl:object-cover max-2xl:h-[600px] max-md:h-[300px]" />
-                <div className="flex flex-col justify-center items-center w-1/2 max-2xl:w-full  ">
+                <img src={About} alt='main-banner' className="w-1/2 max-2xl:w-full max-2xl:object-cover max-2xl:h-[600px] max-md:h-[300px]" />
+                <div className="flex flex-col justify-center items-center w-1/2 max-2xl:w-full  mb-10">
                     <h1 className=" text-main-yellow text-center font-montserrat font-semibold text-3xl mt-5 leading-normal mb-5
             max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
                         О компании
                     </h1>
-                    <div className="text-white text-justify font-montserrat text-2xl  max-lg:text-xl max-sm:text-base font-normal mx-20">
+                    <div className="text-white text-justify font-montserrat text-2xl max-lg:text-xl max-sm:text-base font-normal mx-20">
                         <p>
                             Компания «Международный Таможенный Сервис» («МТС») предоставляет клиентам транспортные и таможенные услуги высочайшего уровня. Территория действия этих услуг охватывает акцизные таможни Балтики, Пскова, Санкт-Петербурга, Центральной акцизной таможни, а кроме того МАПП «Торфяновка». На компанию работают таможенные брокеры и многочисленные транспортные экспедиторы.
                         </p>

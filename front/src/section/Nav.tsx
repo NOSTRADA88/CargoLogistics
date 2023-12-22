@@ -46,7 +46,7 @@ const Nav = () => {
               }
             }}
             className="text-nav-text font-montserrat text-base font-medium 
-                        transition-all duration-300 ease-in-out hover:text-white active:text-white relative"
+            animation-hover  hover:text-white active:text-white relative"
           >
             {item.label}
             <span className="nav-link-hover-line"></span>
@@ -88,7 +88,7 @@ const Nav = () => {
                   }
                 }}
                 className="text-nav-text font-montserrat text-base  font-medium p-8
-                   transition-all duration-300 ease-in-out hover:text-white active:text-white relative block mb-2"
+                animation-hover  hover:text-white active:text-white relative block mb-2"
               >
                 {item.label}
                 <span className="nav-link-hover-line"></span>
