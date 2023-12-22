@@ -27,9 +27,6 @@ const AboutServices = ({ closeModal, selectedService }: AboutServicesProps) => {
                             <div className="max-h-[500px] overflow-y-auto ">
                                 <div className="text-block mr-5">
                                     <p dangerouslySetInnerHTML={{ __html: selectedService.text || '' }} />
-                                    <p dangerouslySetInnerHTML={{ __html: selectedService.text || '' }} />
-                                    <p dangerouslySetInnerHTML={{ __html: selectedService.text || '' }} />
-                                    <p dangerouslySetInnerHTML={{ __html: selectedService.text || '' }} />
                                 </div>
                             </div>
                         </div>
