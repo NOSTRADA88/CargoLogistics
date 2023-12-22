@@ -12,7 +12,7 @@ import (
 var db *mongo.Database
 
 func Init() error {
-	err := godotenv.Load()
+	err := godotenv.Load("server.env", ".env")
 	if err != nil {
 		return err
 	}
