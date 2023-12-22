@@ -4,7 +4,7 @@
 .DS_Store
 Thumbs.db
 *.tmp
-server/.env
+server/server.env
 server/.DS_Store
 front/node_modules
 front/.env
