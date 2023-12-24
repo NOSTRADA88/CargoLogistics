@@ -6,6 +6,7 @@ Thumbs.db
 *.tmp
 server/server.env
 server/.DS_Store
+server/Dockerfile
 front/node_modules
 front/.env
 front/build
