@@ -13,3 +13,4 @@ front/.DS_Store
 front/.log
 auth/auth.env
 auth/.DS_Store
+auth/Dockerfile

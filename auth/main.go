@@ -33,7 +33,7 @@ func run() error {
 		SigningKey: jwtware.SigningKey{Key: []byte(os.Getenv("SECRET")), JWTAlg: jwtware.HS256},
 	}))
 
-	app.Get("/restricted", handler.Restricted)
+	app.Get("/authorization", handler.Restricted)
 
 	if err := app.Listen(":1338"); err != nil {
 		return err
