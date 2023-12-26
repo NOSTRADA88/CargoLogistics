@@ -15,3 +15,5 @@ front/.log
 auth/auth.env
 auth/.DS_Store
 auth/Dockerfile
+docker-compose.yaml
+compose-data

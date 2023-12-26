@@ -12,8 +12,7 @@ import (
 var db *mongo.Database
 
 func Init() error {
-	err := godotenv.Load("server.env", ".env")
-	if err != nil {
+	if err := godotenv.Load("server.env"); err != nil {
 		return err
 	}
 	url := os.Getenv("MONGODB_URL")

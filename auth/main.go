@@ -7,6 +7,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/joho/godotenv"
 	"log"
 	"os"
 )
@@ -18,6 +19,9 @@ func main() {
 }
 
 func run() error {
+	if err := godotenv.Load("auth.env"); err != nil {
+		return err
+	}
 	app := fiber.New()
 	app.Use(
 		logger.New(),

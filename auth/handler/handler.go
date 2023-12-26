@@ -17,7 +17,8 @@ func Login(ctx *fiber.Ctx) error {
 			"message": "can't parse json",
 		})
 	}
-	if body.Login == os.Getenv("LOGIN_JWT") || body.Password == os.Getenv("PASSWORD_JWT") {
+
+	if body.Login != os.Getenv("LOGIN_JWT") || body.Password != os.Getenv("PASSWORD_JWT") {
 		return ctx.Status(400).JSON(fiber.Map{
 			"error": "bad credentials",
 		})
