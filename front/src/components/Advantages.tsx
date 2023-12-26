@@ -46,7 +46,7 @@ const Advantages = () => {
         max-2xl:grid-cols-2 max-lg:grid-cols-1 ">
           {advantagesList.map((advantage, index) => (
             <div key={index} className="w-full px-4 md:px-20 mb-4 md:mb-20">
-              <div className="rounded-lg border-2 border-main-yellow p-8 bg-white flex flex-col h-full max-lg:p-14">
+              <div className="rounded-lg border-2 border-main-yellow p-8 bg-white flex flex-col h-full max-lg:p-14 max-md:p-5">
                 <p className={`text-center font-montserrat text-2xl font-semibold uppercase max-2xl:text-xl max-lg:text-base  max-[400px]:text-sm  
                  ${index % 2 === 0 ? 'text-main-text' : 'text-main-yellow'}`}>
                   {advantage.title}

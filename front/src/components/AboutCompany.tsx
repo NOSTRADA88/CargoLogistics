@@ -11,7 +11,7 @@ const AboutCompany = () => {
             max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
                         О компании
                     </h1>
-                    <div className="text-white text-justify font-montserrat text-2xl max-lg:text-xl max-sm:text-base font-normal mx-20">
+                    <div className="text-white text-justify font-montserrat text-2xl max-lg:text-xl max-sm:text-base font-normal mx-20 max-md:mx-10">
                         <p>
                             Компания «Международный Таможенный Сервис» («МТС») предоставляет клиентам транспортные и таможенные услуги высочайшего уровня. Территория действия этих услуг охватывает акцизные таможни Балтики, Пскова, Санкт-Петербурга, Центральной акцизной таможни, а кроме того МАПП «Торфяновка». На компанию работают таможенные брокеры и многочисленные транспортные экспедиторы.
                         </p>
