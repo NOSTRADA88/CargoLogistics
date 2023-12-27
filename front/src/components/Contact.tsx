@@ -57,7 +57,7 @@ const Contact = () => {
         <div className="flex flex-col items-start justify-center gap-10 mt-10 ">
           <div className="flex gap-14 max-lg:gap-8 items-center">
             <img src={Phone} alt="phone" />
-            <a href="tel:+79111016677" className="cursor-pointer text-white font-montserrat text-3xl font-normal leading-normal
+            <a href="https://wa.me/79111016677" target="_blank" className="cursor-pointer text-white font-montserrat text-3xl font-normal leading-normal
              tracking-wide animation-hover  max-[1440px]-text-2xl max-lg:text-xl max-sm:text-base hover:text-nav-text">
               +7 (911) 101-66-77
             </a>

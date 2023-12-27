@@ -23,7 +23,7 @@ const Order = ({ closeModal }: OrderProps) => {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-bg-main p-10 rounded-[20px]">
+            <div className="bg-bg-main p-10 rounded-[20px] max-sm:mx-2">
                 <div className="flex justify-end">
                     <button
                         className="text-white text-2xl font-montserrat cursor-pointer "

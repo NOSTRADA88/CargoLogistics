@@ -1,7 +1,7 @@
 type AboutServicesProps = {
     closeModal: () => void;
     selectedService: {
-        id: number;
+        id: string;
         title: string;
         image: string;
         text: string;

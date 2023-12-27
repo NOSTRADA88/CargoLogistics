@@ -26,8 +26,8 @@ func run() error {
 	app.Use(
 		logger.New(),
 		cors.New(cors.Config{
-			AllowOrigins: "http://localhost:3000, http://localhost:1338/, http://127.0.0.1:1338",
-			AllowHeaders: "Origin, Content-Type, Accept",
+			AllowOrigins: "http://localhost:3000,http://localhost:1338",
+			AllowHeaders: "Origin, Content-Type, Accept, Authorization",
 			AllowMethods: "GET,POST,PUT,DELETE",
 		}))
 

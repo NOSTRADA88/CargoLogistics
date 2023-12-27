@@ -1,7 +1,25 @@
 import { About } from "../assets"
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 
 const AboutCompany = () => {
+
+    const [aboutContent, setAboutContent] = useState(``);
+
+    useEffect(() => {
+        axios.get(`${process.env.REACT_APP_VAR_API_URL}/`)
+            .then(response => {
+                const aboutCompany = response.data.texts.find((text: any) => text.title === "О компании");
+                if (aboutCompany) {
+                    setAboutContent(aboutCompany.text);
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
+
     return (
         <div id='about' className=" w-full " >
             <div className="flex max-2xl:flex-col justify-center">
@@ -11,37 +29,12 @@ const AboutCompany = () => {
             max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
                         О компании
                     </h1>
-                    <div className="text-white text-justify font-montserrat text-2xl max-lg:text-xl max-sm:text-base font-normal mx-20 max-md:mx-10">
-                        <p>
-                            Компания «Международный Таможенный Сервис» («МТС») предоставляет клиентам транспортные и таможенные услуги высочайшего уровня. Территория действия этих услуг охватывает акцизные таможни Балтики, Пскова, Санкт-Петербурга, Центральной акцизной таможни, а кроме того МАПП «Торфяновка». На компанию работают таможенные брокеры и многочисленные транспортные экспедиторы.
-                        </p>
-                        <p className="mt-4">
-                            Сфера деятельности компании «МТС» включает:
-                        </p>
-                        <ul className="list-disc list-inside mt-2">
-                            <li>дверная доставка грузов от заказчика к адресату;</li>
-                            <li>таможенное оформление пакета документов, который позволяет пересечение границы с разнообразными товарами (строительные материалы, мебель и инструменты для ее сборки, сантехника, промышленное и технологическое оборудование, электротехника, таможенное оформление спец техники, автотранспорта и пр.).</li>
-                        </ul>
-                        <p className="mt-4">
-                            Большинство товаров при импорте за территорию нашего государства подчиняются закону РФ «О сертификации». Поэтому на эти товары необходимо предоставлять в органы таможни всю необходимую разрешительную документацию – сертификаты, свидетельства, а также заключения на соответствие продукции ветеринарным, фитосанитарным и иным регламентам в РФ.
-                        </p>
-                        <p className="mt-4">
-                            Мы предлагаем оформление полного комплекса сертификационных документов, включая:
-                        </p>
-                        <ul className="list-disc list-inside mt-2">
-                            <li>сертификаты типа 1,2 ГОСТ;</li>
-                            <li>документы от санитарно-эпидемиологических учреждений;</li>
-                            <li>декларации соответствия;</li>
-                            <li>сертификаты для средств связи и прочее.</li>
-                        </ul>
-                        <p className="mt-4">
-                            Мы поможем вам оформить все таможенные документы качественно и в срок.
-                        </p>
+                    <div
+                        className="text-white text-justify font-montserrat text-2xl max-lg:text-xl max-sm:text-base font-normal mx-20 max-md:mx-10"
+                        style={{whiteSpace: 'pre-line'}}>
+                        {aboutContent}
                     </div>
-
-
                 </div>
-
             </div>
         </div>
     )

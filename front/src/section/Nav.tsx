@@ -96,7 +96,7 @@ const Nav = () => {
             ))}
             <button
               className="bg-main-yellow rounded-md py-3 px-3 cursor-pointer text-black font-montserrat text-base font-semibold
-                             hidden max-md:block mb-10"
+                             hidden max-md:block mb-10 hover:bg-[#B4884F] animation-hover"
               onClick={openModal}
             >
               Заказать звонок

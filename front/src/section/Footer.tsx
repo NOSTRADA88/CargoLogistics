@@ -56,7 +56,7 @@ const Footer = () => {
                     </div>
                     <button
                         className="bg-main-yellow rounded-md py-3 px-8 cursor-pointer text-black font-montserrat text-3xl font-semibold
-                        max-[1440px]-text-2xl max-lg:text-xl max-sm:text-base "
+                        max-[1440px]-text-2xl max-lg:text-xl max-sm:text-base hover:bg-[#B4884F] animation-hover"
                         onClick={openModal}>
                         Заказать звонок
                     </button>
@@ -73,7 +73,7 @@ const Footer = () => {
                leading-normal tracking-wide animation-hover max-sm:text-base hover:text-nav-text " target="_blank">
                     190020, Россия, Санкт-Петербург, ул. Бумажная д. 3, офис 510</a>
                 <div className="flex justify-end gap-20  max-md:gap-10 max-sm:flex-col  max-sm:gap-4 max-sm:mt-4 ">
-                    <a href="tel:+79111016677"
+                    <a href="https://wa.me/79111016677" target="_blank"
                         className="cursor-pointer text-main-gray font-montserrat text-lg font-normal
                leading-normal tracking-wide animation-hover max-sm:text-base hover:text-nav-text" >
                         +7 (911) 101-66-77</a>
