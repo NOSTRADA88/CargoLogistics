@@ -42,20 +42,19 @@ const Advantages = () => {
           className="absolute inset-0 object-cover max-lg:hidden"
         />
 
-        <div className="grid grid-cols-3 justify-center mx-4 md:mx-20 relative z-10 
-        max-2xl:grid-cols-2 max-lg:grid-cols-1 ">
+        <div className="grid grid-cols-3 max-2xl:grid-cols-2 max-md:grid-cols-1  relative z-10  max-md:mx-5 max-xl:mx-10">
           {advantagesList.map((advantage, index) => (
-            <div key={index} className="w-full px-4 md:px-20 mb-4 md:mb-20">
-              <div className="rounded-lg border-2 border-main-yellow p-8 bg-white flex flex-col h-full max-lg:p-14 max-md:p-5">
-                <p className={`text-center font-montserrat text-2xl font-semibold uppercase max-2xl:text-xl max-lg:text-base  max-[400px]:text-sm  
+              <div key={index} className="w-full  px-20  mb-20 max-xl:px-10  max-xl:mb-14 max-sm:px-5  max-sm:mb-5">
+                <div className="rounded-lg border-2 border-main-yellow p-10 bg-white flex flex-col h-full max-lg:p-8">
+                  <p className={`text-center font-montserrat text-2xl font-semibold uppercase max-2xl:text-xl max-lg:text-base  max-[400px]:text-sm  
                  ${index % 2 === 0 ? 'text-main-text' : 'text-main-yellow'}`}>
-                  {advantage.title}
-                </p>
-                <p className="text-center font-montserrat text-black text-base max-[400px]:text-xs   font-normal leading-normal mt-5">
-                  {advantage.description}
-                </p>
+                    {advantage.title}
+                  </p>
+                  <p className="text-center font-montserrat text-black text-base max-[400px]:text-xs   font-normal leading-normal mt-5">
+                    {advantage.description}
+                  </p>
+                </div>
               </div>
-            </div>
           ))}
         </div>
       </div>

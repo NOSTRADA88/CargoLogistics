@@ -64,23 +64,25 @@ const Services = () => {
             <h1 className="text-center font-montserrat text-4xl font-semibold text-white mb-8 max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
                 Услуги
             </h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-20 mx-10 mb-10 cursor-pointer max-lg:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2   lg:grid-cols-4 gap-20 mx-10 mb-10 cursor-pointer max-lg:gap-10">
                 {servicesList.map((service, index) => (
-                    <div key={index} className="relative overflow-hidden rounded-lg border-2 border-main-yellow hover:ring-2 hover:ring-main-yellow animation-hover" onClick={() => openModal(service)}>
+                    <div key={index}
+                         className="relative overflow-hidden rounded-lg border-2 border-main-yellow hover:ring-2 hover:ring-main-yellow animation-hover"
+                         onClick={() => openModal(service)}>
                         <img
                             src={service.image}
                             alt={service.title}
                             className="w-full h-auto object-cover max-sm:h-[90%]"
                         />
                         <div className="absolute bottom-0 left-0 w-full h-20 bg-main-background bg-opacity-80 p-4">
-                            <p className="text-white text-center font-montserrat font-semibold text-xl max-sm:text-base">
+                            <p className="text-white text-center font-montserrat font-semibold text-xl max-xl:text-base ">
                                 {service.title}
                             </p>
                         </div>
                     </div>
                 ))}
             </div>
-            <img src={ServicesSection} alt="service" />
+            <img src={ServicesSection} alt="service"/>
             {isModalOpen && (
                 <AboutServices closeModal={closeModal} selectedService={selectedService} />
             )}

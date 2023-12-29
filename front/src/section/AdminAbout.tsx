@@ -34,7 +34,7 @@ const AdminAbout = () => {
                     <div className="flex-grow" />
                     <Link to={`${aboutContentID}`} key={0}>
                         <button
-                            className="bg-main-yellow rounded-md py-3 cursor-pointer text-black font-montserrat text-base font-semibold hover:bg-[#B4884F] animation-hover mt-6"
+                            className="bg-main-yellow rounded-md py-3 cursor-pointer text-black font-montserrat text-base font-semibold hover:bg-[#B4884F] animation-hover mt-6 px-5"
                         >
                             Редактировать
                         </button>

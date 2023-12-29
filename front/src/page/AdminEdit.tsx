@@ -59,7 +59,7 @@ const AdminEdit = () => {
                         {...register("text", {
                             min: {value: 1, message: "Данный текст не может быть пустым"},
                         })}
-                        rows={18}
+                        rows={17}
                         cols={30}
                     />
                     {errors.text && <div className="text-red-500">{String(errors.text.message)}</div>}
@@ -67,7 +67,7 @@ const AdminEdit = () => {
 
                 <div className="text-center">
                     <button
-                        className="bg-main-yellow rounded-md py-3 cursor-pointer text-black font-montserrat text-base font-semibold hover:bg-[#B4884F] animation-hover mt-1.5"
+                        className="bg-main-yellow rounded-md py-3 cursor-pointer text-black font-montserrat text-base font-semibold hover:bg-[#B4884F] animation-hover my-6 px-5"
                         type="submit"
                     >
                     Сохранить

@@ -21,10 +21,10 @@ const AboutCompany = () => {
     }, []);
 
     return (
-        <div id='about' className=" w-full " >
+        <div className=" w-full " >
             <div className="flex max-2xl:flex-col justify-center">
                 <img src={About} alt='main-banner' className="w-1/2 max-2xl:w-full max-2xl:object-cover max-2xl:h-[600px] max-md:h-[300px]" />
-                <div className="flex flex-col justify-center items-center w-1/2 max-2xl:w-full  mb-10">
+                <div id='about' className="flex flex-col justify-center items-center w-1/2 max-2xl:w-full  mb-10">
                     <h1 className=" text-main-yellow text-center font-montserrat font-semibold text-3xl mt-5 leading-normal mb-5
             max-2xl:text-2xl max-lg:text-xl max-sm:text-base">
                         О компании

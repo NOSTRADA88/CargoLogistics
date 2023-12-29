@@ -69,7 +69,7 @@ const Order = ({ closeModal }: OrderProps) => {
                 <div className="flex justify-end">
                     <button
                         className="bg-main-yellow rounded-md py-3 px-6 cursor-pointer
-             text-black font-montserrat text-base font-semibold  max-sm:text-sm"
+             text-black font-montserrat text-base font-semibold  max-sm:text-sm hover:bg-[#B4884F] animation-hover"
                         onClick={handleOrderButtonClick}
                     >
                         Заказать звонок

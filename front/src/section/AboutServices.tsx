@@ -25,8 +25,8 @@ const AboutServices = ({ closeModal, selectedService }: AboutServicesProps) => {
                             <h2 className="text-main-yellow text-center font-montserrat font-semibold text-2xl mt-5 leading-normal mb-5
                          max-lg:text-xl max-sm:text-base">{selectedService.title}</h2>
                             <div className="max-h-[500px] overflow-y-auto ">
-                                <div className="text-block mr-5">
-                                    <p dangerouslySetInnerHTML={{ __html: selectedService.text || '' }} />
+                                <div className="text-block mr-5" style={{ whiteSpace: "pre-line" }}>
+                                    <p>{selectedService.text}</p>
                                 </div>
                             </div>
                         </div>
