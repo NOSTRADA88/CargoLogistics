@@ -29,7 +29,7 @@ func Login(ctx *fiber.Ctx) error {
 	claims := jwt.MapClaims{
 		"sub":   uuidString,
 		"admin": true,
-		"exp":   time.Now().Add(time.Hour * 72).Unix(),
+		"exp":   time.Now().Add(time.Second * 3).Unix(),
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)

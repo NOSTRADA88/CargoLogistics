@@ -3,9 +3,14 @@ package handler
 import (
 	"CargoLogisticsServer/database"
 	"CargoLogisticsServer/models"
+	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"log"
+	"mime"
+	"net/smtp"
+	"os"
 )
 
 // InsertText godoc
@@ -199,5 +204,42 @@ func GetText(ctx *fiber.Ctx) error {
 	return ctx.Status(200).JSON(fiber.Map{
 		"text":    text,
 		"message": "text presented successfully",
+	})
+}
+
+var ()
+
+func SendEmail(ctx *fiber.Ctx) error {
+	body := new(ContactDTO)
+	if err := ctx.BodyParser(body); err != nil {
+		return ctx.Status(400).JSON(fiber.Map{
+			"error": "Invalid body",
+		})
+	}
+	smtpServer := os.Getenv("SMTP_SERVER")
+	smtpPort := os.Getenv("SMTP_PORT")
+	smtpUsername := os.Getenv("SMTP_USERNAME")
+	smtpPassword := os.Getenv("SMTP_PASSWORD")
+
+	subject := "Заявка от " + body.FullName
+	messageBody := fmt.Sprintf("ФИО: %s\r\nНомер: %s\r\n\r\nОписание:\r\n%s",
+		body.FullName, body.PhoneNumber, body.Description)
+	encodedSubject := mime.QEncoding.Encode("UTF-8", subject)
+	subjectHeader := fmt.Sprintf("Subject: %s", encodedSubject)
+	message := fmt.Sprintf("%s\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n%s", subjectHeader, messageBody)
+
+	auth := smtp.PlainAuth("", smtpUsername, smtpPassword, smtpServer)
+
+	if err := smtp.SendMail(smtpServer+":"+smtpPort, auth, smtpUsername, []string{body.Email}, []byte(message)); err != nil {
+		log.Printf("Error sending email: %v", err)
+		return ctx.Status(400).JSON(fiber.Map{
+			"error":   err,
+			"message": "Failed to send email",
+		})
+	}
+
+	return ctx.Status(200).JSON(fiber.Map{
+		"message": "Application sent successfully",
+		"result":  true,
 	})
 }

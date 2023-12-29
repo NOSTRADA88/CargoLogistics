@@ -9,6 +9,7 @@ func SetUpRouters(app *fiber.App) {
 	app.Get("/:id", handler.GetText)
 	app.Get("/", handler.GetTexts)
 	app.Post("/", handler.InsertText)
+	app.Post("/application", handler.SendEmail)
 	app.Put("/:id", handler.ChangeText)
 	app.Delete("/:id", handler.DeleteText)
 }
