@@ -207,8 +207,6 @@ func GetText(ctx *fiber.Ctx) error {
 	})
 }
 
-var ()
-
 func SendEmail(ctx *fiber.Ctx) error {
 	body := new(ContactDTO)
 	if err := ctx.BodyParser(body); err != nil {
