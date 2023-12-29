@@ -222,8 +222,8 @@ func SendEmail(ctx *fiber.Ctx) error {
 	smtpPassword := os.Getenv("SMTP_PASSWORD")
 
 	subject := "Заявка от " + body.FullName
-	messageBody := fmt.Sprintf("ФИО: %s\r\nНомер: %s\r\n\r\nОписание:\r\n%s",
-		body.FullName, body.PhoneNumber, body.Description)
+	messageBody := fmt.Sprintf("ФИО: %s\r\nНомер: %s\r\nПочта: %s\r\n\r\nОписание:\r\n%s",
+		body.FullName, body.PhoneNumber, body.Email, body.Description)
 	encodedSubject := mime.QEncoding.Encode("UTF-8", subject)
 	subjectHeader := fmt.Sprintf("Subject: %s", encodedSubject)
 	message := fmt.Sprintf("%s\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n%s", subjectHeader, messageBody)
